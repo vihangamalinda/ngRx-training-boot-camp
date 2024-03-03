@@ -6,8 +6,8 @@ const initialState =0;
 // New version of declaring a reducers in ngRx
 export const counterReducer = createReducer(
 initialState,
-on(increment,(state)=>state+1),
-on(decrement,(state)=>state-1)
+on(increment,(state,action)=>state+action.value),
+on(decrement,(state,action)=>state-action.value)
 );
 
 // Older way(version) of declaring a reducers in ngRx
