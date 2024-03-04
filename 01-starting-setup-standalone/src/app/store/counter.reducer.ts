@@ -1,6 +1,6 @@
-import { createReducer,on } from "@ngrx/store";
+import { Action, createReducer,on } from "@ngrx/store";
 // import { decrement, increment } from "./counter.action";
-import { decrement } from "./counter.action";
+import { COUNTER_DECREMENT, COUNTER_INCREMENT, CounterActions, DecrementAction, IncrementAction } from "./counter.action";
 
 
 const initialState =0;
@@ -13,11 +13,11 @@ const initialState =0;
 // );
 
 // Older way(version) of declaring a reducers in ngRx
-export function counterReducer(state=initialState,action:any){
-    if(action.type === '[Counter] Increment'){
-        return state+action.value;
-    }else if(action.type === '[Counter] Decrement'){
-        return state-action.value;
+export function counterReducer(state=initialState,action:CounterActions | Action){
+    if(action.type === COUNTER_INCREMENT){
+        return state+(action as IncrementAction).value;
+    }else if(action.type === COUNTER_DECREMENT){
+        return state-(action as DecrementAction).value;
     }
     return state;
 }
