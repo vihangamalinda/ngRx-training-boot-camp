@@ -3,7 +3,7 @@ import { provideStore } from '@ngrx/store';
 
 
 import { AppComponent } from './app/app.component';
-import { counterReducer } from './app/store/counter.reducer';
+import { counterReducer } from './app/store/counter.reducers';
 import { provideEffects } from '@ngrx/effects';
 
 bootstrapApplication(AppComponent, {

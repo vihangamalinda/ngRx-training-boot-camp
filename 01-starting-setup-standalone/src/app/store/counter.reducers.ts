@@ -1,5 +1,5 @@
 import { Action, createReducer,on } from "@ngrx/store";
-import { decrement, increment } from "./counter.action";
+import { decrement, increment } from "./counter.actions";
 // import { COUNTER_DECREMENT, COUNTER_INCREMENT, CounterActions, DecrementAction, IncrementAction } from "./counter.action";
 
 

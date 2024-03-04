@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AsyncPipe} from '@angular/common';
-import { selectCount,selectThripleCount } from '../store/counter.selector';
+import { selectCount,selectThripleCount } from '../store/counter.selectors';
 
 @Component({
   selector: 'app-counter-output',

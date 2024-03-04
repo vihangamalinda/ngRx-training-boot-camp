@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { CounterService } from '../counter.service';
 import { Store } from '@ngrx/store';
-import {  decrement, increment } from '../store/counter.action';
+import {  decrement, increment } from '../store/counter.actions';
 // import { DecrementAction, IncrementAction } from '../store/counter.action';
 
 @Component({
